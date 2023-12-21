@@ -2,7 +2,7 @@
 
 ## Overview
 
-This project PoC to demonstrate how 2 Pods in the same namespace can communicate with each other via using Service resource. It consists of two simple FastAPI applications that communicate with each other via their REST APIs.
+This project is a PoC to demonstrate how 2 Pods in the same namespace can communicate with each other via using Service resource. It consists of two simple FastAPI applications that communicate with each other via their REST APIs.
 
 ## Applications
 
