@@ -23,10 +23,10 @@ port-forward:
 		sleep 2; \
 	done
 	@kubectl port-forward service/app1-service $(LOCAL_PORT):80 -n $(NAMESPACE) &
+	sleep $(DELAY)
 
 test:
-	sleep $(DELAY)
-	curl -X POST http://localhost:$(LOCAL_PORT)/send -H "Content-Type: application/json" -d '{"message": "Hello, App2!"}'
+	curl -X POST http://localhost:$(LOCAL_PORT)/send?message=Hello,%20App2!
 
 all: build push deploy port-forward test
 
